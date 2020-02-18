@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SimpleApp.Views.NewTransaction">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HeightRequest="80" Margin="0,0,0,20" BackgroundColor="#3bb4c1">
+                <StackLayout Grid.ColumnSpan="6" Margin="20, 5, 20, 0">
+                    <Label Text="Transaction"
+                           TextColor="#f6f5f5" 
+                           FontSize="40" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid BackgroundColor="#d1d1d1" Margin="10, 30, 10, 5">
+                <Label Text="Iban:"
+                       TextColor="#3bb4c1"
+                       Margin="10, 0, 0, 0"/>
+                <Entry x:Name="numar" Margin="10, 20, 0, 0"/>
+            </Grid>
+
+            <Grid BackgroundColor="#d1d1d1" Margin="10, 5, 10, 5">
+                <Label Text="Amount:"
+                       TextColor="#3bb4c1"
+                       Margin="10, 0, 0, 0"/>
+                <Entry x:Name="amount" Margin="10, 20, 0, 0"/>
+            </Grid>
+
+            <Grid>
+                <Button Text="Send"
+                    BackgroundColor="#3bb4c1"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    CornerRadius="15"
+                    Margin="0, 10, 0, 0"
+                    Clicked="Send" />
+                <Button Text="Request"
+                    BackgroundColor="#3bb4c1"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    CornerRadius="15"
+                    Margin="0, 10, 0, 0"
+                    Grid.Column="1"
+                    Clicked="Request"/>
+                
+            </Grid>
+         
+            <Grid HeightRequest="100" Margin="0,0,0,0" BackgroundColor="#3bb4c1" VerticalOptions="EndAndExpand">
+                <ImageButton Source="@drawable/house.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Clicked="Home"/>
+                <ImageButton Source="@drawable/trans.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="1" 
+                             Clicked="Transactions"/>
+                <ImageButton Source="@drawable/analit.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="2"
+                             Clicked="Analytics"/>
+                <ImageButton Source="@drawable/set.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="3"
+                             Clicked="Settings"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

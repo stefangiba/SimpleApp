@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SimpleApp.Views.Menu"
+             BackgroundColor="#ddfefe">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid HeightRequest="80" Margin="0,0,0,20" BackgroundColor="#3bb4c1">
+                <StackLayout Grid.ColumnSpan="6" Margin="20, 5, 20, 0">
+                    <Label Text="Home"
+                           TextColor="#f6f5f5" 
+                           FontSize="40" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+                
+            </Grid>
+
+
+            <Grid HeightRequest="200" Margin="20, 10, 20, 0" BackgroundColor="#ddddee">
+                <StackLayout>
+                    <Label x:Name="type"
+                           Text="TYPE"
+                           FontSize="20" 
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           Margin="20, 10, 10, 0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label x:Name="name"
+                           Text="ANA ANA ANA ANA"
+                           FontSize="20" 
+                           TextColor="#3bb4c1"
+                           FontAttributes="Bold"
+                           Margin="20, 40, 10, 0"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label x:Name="iban"
+                           Text="IIIIIIIIIBBBBBBBBBAAAAN"
+                           FontSize="20" 
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalOptions="EndAndExpand"
+                           Margin="10, 70, 20, 0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label x:Name="cardid"
+                           Text="**** **** ***** 1234"
+                           FontSize="20" 
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalOptions="EndAndExpand"
+                           Margin="20, 100, 20, 0"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label x:Name="amount"
+                           Text="0.01 RON"
+                           FontSize="30" 
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           Margin="30, 130, 10, 0"/>
+                </StackLayout>
+
+                <Button Text="New Transaction"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    BackgroundColor="#ddddee"
+                    TextColor="DarkGreen"
+                    FontAttributes="Bold"
+                    Clicked="NewTrans"/>
+
+            </Grid>
+
+            <Grid HeightRequest="200" Margin="20, 10, 20, 0" BackgroundColor="#ddddee">
+                <StackLayout>
+                    <Label x:Name="type2"
+                           Text="TYPE"
+                           FontSize="20" 
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           Margin="20, 10, 10, 0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label x:Name="name2"
+                           Text="ANA ANA ANA ANA"
+                           FontSize="20" 
+                           TextColor="#3bb4c1"
+                           FontAttributes="Bold"
+                           Margin="20, 40, 10, 0"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label x:Name="iban2"
+                           Text="IIIIIIIIIBBBBBBBBBAAAAN"
+                           FontSize="20" 
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalOptions="EndAndExpand"
+                           Margin="10, 70, 20, 0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label x:Name="cardid2"
+                           Text="**** **** ***** 1234"
+                           FontSize="20" 
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalOptions="EndAndExpand"
+                           Margin="20, 100, 20, 0"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label x:Name="amount2"
+                           Text="0.01 RON"
+                           FontSize="30" 
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           Margin="30, 130, 10, 0"/>
+                </StackLayout>
+
+                <Button Text="New Transaction"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    BackgroundColor="#ddddee"
+                    TextColor="DarkGreen"
+                    FontAttributes="Bold"
+                    Clicked="NewTrans"/>
+
+            </Grid>
+
+
+            <Grid HeightRequest="100" Margin="0,0,0,0" BackgroundColor="#3bb4c1" VerticalOptions="EndAndExpand">
+                <ImageButton Source="@drawable/house.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Clicked="Home"/>
+                <ImageButton Source="@drawable/trans.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="1" 
+                             Clicked="Transactions"/>
+                <ImageButton Source="@drawable/analit.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="2"
+                             Clicked="Analytics"/>
+                <ImageButton Source="@drawable/set.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="3"
+                             Clicked="Settings"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

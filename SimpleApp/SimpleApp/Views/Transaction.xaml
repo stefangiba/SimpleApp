@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SimpleApp.Views.Transaction">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid HeightRequest="80" Margin="0,0,0,20" BackgroundColor="#3bb4c1">
+                <StackLayout Grid.ColumnSpan="6" Margin="20, 5, 20, 0">
+                    <Label Text="Transactions"
+                           TextColor="#f6f5f5" 
+                           FontSize="40" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+
+            </Grid>
+
+            <Frame BackgroundColor="#048998" 
+                   BorderColor="White" 
+                   HeightRequest="50"
+                   CornerRadius="15"
+                   Opacity="0.8"
+                   Padding="0"
+                   Margin="10,20,10,0">
+                <Grid Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Commerciant" 
+                           TextColor="#281e64" 
+                           FontSize="10" 
+                           FontAttributes="Bold"
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center" 
+                           Grid.Column="0"
+                           Margin="10,0,10,0" />
+                    <Label Text ="Date" 
+                           TextColor="#281e64" 
+                           FontSize="10" 
+                           FontAttributes="Bold"
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center" 
+                           Grid.Column="1"
+                           Margin="10,0,10,0" />
+                    <Label Text ="Amount (RON)" 
+                           TextColor="#281e64" 
+                           FontSize="10" 
+                           FontAttributes="Bold"
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center" 
+                           Grid.Column="2"
+                           Margin="10,0,10,0" />
+                    <BoxView BackgroundColor="White" 
+                             WidthRequest="1" 
+                             HorizontalOptions="EndAndExpand" 
+                             VerticalOptions="FillAndExpand"
+                             Grid.Column="0"/>
+                    <BoxView BackgroundColor="White" 
+                             WidthRequest="1" 
+                             HorizontalOptions="EndAndExpand" 
+                             VerticalOptions="FillAndExpand"
+                             Grid.Column="1"/>
+                </Grid>
+            </Frame>
+
+            <ListView x:Name="TransactionsList"  Margin="0,0,0,10" ItemSelected="Select">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="{Binding Culoare}" 
+                                   BorderColor="White" 
+                                   HeightRequest="100"
+                                   CornerRadius="15"
+                                   Opacity="0.8"
+                                   Padding="0"
+                                   Margin="10,2,10,3">
+                                <Grid Padding="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Comerciant}" 
+                                           FontSize="10" 
+                                           TextColor="#281e64" 
+                                           VerticalOptions="Center" 
+                                           HorizontalOptions="Center" 
+                                           Grid.Column="0"
+                                           Margin="10,0,10,0" />
+                                    <Label Text="{Binding Data}" 
+                                           FontSize="10" 
+                                           TextColor="#281e64" 
+                                           VerticalOptions="Center" 
+                                           HorizontalOptions="Center" 
+                                           Grid.Column="1"
+                                           Margin="10,0,10,0" />
+                                    <Label Text="{Binding Suma}" 
+                                           FontSize="10" 
+                                           TextColor="#281e64" 
+                                           VerticalOptions="Center" 
+                                           HorizontalOptions="Center" 
+                                           Grid.Column="2"
+                                           Margin="10,0,10,0" />
+                                    <BoxView BackgroundColor="White" 
+                                             WidthRequest="1" 
+                                             HorizontalOptions="EndAndExpand" 
+                                             VerticalOptions="FillAndExpand"
+                                             Grid.Column="0" />
+                                    <BoxView BackgroundColor="White" 
+                                             WidthRequest="1" 
+                                             HorizontalOptions="EndAndExpand" 
+                                             VerticalOptions="FillAndExpand"
+                                             Grid.Column="1" />
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid HeightRequest="100" Margin="0,0,0,0" BackgroundColor="#3bb4c1" VerticalOptions="EndAndExpand">
+                <ImageButton Source="@drawable/house.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Clicked="Home"/>
+                <ImageButton Source="@drawable/trans.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="1" 
+                             Clicked="Transactions"/>
+                <ImageButton Source="@drawable/analit.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="2"
+                             Clicked="Analytics"/>
+                <ImageButton Source="@drawable/set.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="3"
+                             Clicked="Settings"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

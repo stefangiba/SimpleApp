@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SimpleApp.Views.Analytics"
+             BackgroundColor="#ddfefe">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid HeightRequest="80" Margin="0,0,0,20" BackgroundColor="#3bb4c1">
+                <StackLayout Grid.ColumnSpan="6" Margin="20, 5, 20, 0">
+                    <Label Text="Analytics"
+                           TextColor="#f6f5f5" 
+                           FontSize="40" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+
+            </Grid>
+
+            <Grid Margin ="10,0,10,0">
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <Label Text="Food"
+                           TextColor="DarkGray"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <ImageButton Source="@drawable/food.png"
+                                 BackgroundColor="#7FB7BB"
+                                 BorderWidth="3"
+                                 BorderColor="#D6E7E9"
+                                 CornerRadius="30"
+                                 Opacity="0.85"
+                                 Clicked="Food"/>
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="1">
+                    <Label Text="Shopping"
+                           TextColor="DarkGray"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <ImageButton Source="@drawable/shopping.png"
+                                 BackgroundColor="#7FB7BB"
+                                 BorderWidth="3"
+                                 BorderColor="#D6E7E9"
+                                 CornerRadius="70"
+                                 Opacity="0.85"
+                                 Clicked="Shopping"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="0">
+                    <Label Text="Health"
+                           TextColor="DarkGray"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <ImageButton Source="@drawable/health.png"
+                                 BackgroundColor="#42888F"
+                                 BorderWidth="3"
+                                 BorderColor="#D6E7E9"
+                                 CornerRadius="70"
+                                 Opacity="0.85"
+                                 Clicked="Health"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1">
+                    <Label Text="Transfer"
+                           TextColor="DarkGray"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <ImageButton Source="@drawable/transfer.png"
+                                 BackgroundColor="#286F75"
+                                 BorderWidth="3"
+                                 BorderColor="#D6E7E9"
+                                 CornerRadius="70"
+                                 Opacity="0.85"
+                                 Clicked="Transfer"/>
+                </StackLayout>
+            </Grid>
+
+
+
+            <Grid HeightRequest="100" Margin="0,0,0,0" BackgroundColor="#3bb4c1" VerticalOptions="EndAndExpand">
+                <ImageButton Source="@drawable/house.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Clicked="Home"/>
+                <ImageButton Source="@drawable/trans.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="1" 
+                             Clicked="Transactions"/>
+                <ImageButton Source="@drawable/analit.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="2"
+                             Clicked="Analyticss"/>
+                <ImageButton Source="@drawable/set.jpg"
+                             HorizontalOptions="Start"
+                             BackgroundColor="#3bb4c1"
+                             Margin="10, 10, 0, 10"
+                             Grid.Column ="3"
+                             Clicked="Settings"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
